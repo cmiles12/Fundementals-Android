@@ -12,11 +12,11 @@ class Contact {
         this.email = email;
     }
 
-    public String getName() {
+    public String getName(){
         return name;
     }
 
-    public String getEmail() {
+    public String getEmail(){
         return email;
     }
 }
@@ -41,9 +41,12 @@ class AddressBook {
 
 public class Main {
     public static void main(String[] args) {
-        Contact bob = new Contact("bob", "bob.bob.com");
+        Contact bob = new Contact("bob", "bob@bob.com");
         AddressBook addressBook = new AddressBook();
         addressBook.add(bob);
+
+        Contact sue = new Contact("sue", "sue@sue.com");
+        addressBook.add(sue);
 
         System.out.println(addressBook.findEmail("bob"));
         System.out.println(addressBook.findEmail("sue"));
